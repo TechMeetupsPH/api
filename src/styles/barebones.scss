@@ -1,0 +1,28 @@
+body {
+  padding-top: 50px;
+}
+
+.main-content {
+  padding: 40px 15px;
+}
+
+a {
+  font-size: 16px;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 1.618em;
+  color: #555;
+}
+
+.meetups {
+  list-style: none;
+  padding-left: 0;
+  .posted-at {
+    text-align: right;
+    float: right;
+    color: #888;
+    font-size: 13px;
+  }
+}
