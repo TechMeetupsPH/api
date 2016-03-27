@@ -2,8 +2,9 @@ body {
   padding-top: 50px;
 }
 
-.main-content {
-  padding: 40px 15px;
+.meetup-content {
+  padding: 10% 10% 30% 10%;
+  width: 80%;
 }
 
 a {
@@ -18,11 +19,13 @@ p, li {
 
 .meetups {
   list-style: none;
-  padding-left: 0;
-  .posted-at {
+  padding-left: 20px;
+  .starts-at {
     text-align: right;
-    float: right;
-    color: #888;
-    font-size: 13px;
+    float: left;
+    margin-right: 15px;
+    color: #008542;
+    font-size: 32px;
   }
 }
+body { font-family: 'Helvetica', 'Arial Rounded MT Bold' }
