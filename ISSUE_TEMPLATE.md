@@ -1,28 +1,26 @@
 What is this! It's an issue template! 
 
-For what?
-========
-
-You know! Putting new events up! 
+For you know! Putting new [events](http://www.merriam-webster.com/dictionary/event) up! 
 
 How do I contribute new events?
 ===
-Since we are operating on a lean budget and don't want to create a fullblown site just yet (some people would call it smart not to do so yet), you can file an issue ticket!
 
-I will attend to your new events right away, as much as possible!
+I am operating on a lean budget of zero and I don't want to create a fullblown site just yet to accomodate your requests, you can file an issue ticket to file your requests.
 
-So three things and one cool thing I need from you when you want something up:
+I will attend to your new events right away, as much as possible, as long as I have these three things and one cool thing from you! 
 
-[] Where is the join link or event page located on the web
-[] What is the event titled
-[] When is the event happening 
+- [ ] 1. Where is the join link or event page located on the web
+- [ ] 2. What is the event titled
+- [ ] 3. When is the event happening 
 
-wait... one more *cool* thing - 
+and... one more thing... - 
 
-[] How do you want the "join us here" phrase be phrased. 
+- [ ] 4. How do you want the "join us here" phrase be phrased. 
 
-It can be in tagalog if you wish. put a "[]" around the word/group of words that you want to be clickable to your event page
+It can be in tagalog. Just put brackets around the word(s) to indicate the link.
 
-PS If I'm away on vacation there will be a notice like "hey I'm not around, please wait X days for me to check your issue out. 
+Example: "Ito ang link [please click here]" 
+
+TYCA It's going to be legend... dairy :)
 
 
