@@ -71,7 +71,7 @@
                 <strong>RAID THE FRIDGE</strong>: GRIT<br />
                 Raid the registration page <a href="https://kickstart.doorkeeper.jp/events/49961">here</a>
             </li>
-            
+
             <li>
               <li><span class="starts-at">30</span>
               <strong>CODECRAFT DRUPAL UNPLUGGED</strong>: Unleash your Drupal Skills<br />
@@ -87,20 +87,19 @@
 
            </ul>
             <h2>AUGUST</h2>
+
             <ul class="meetups">
-            <li>
-              <span class="starts-at">6</span>
-              <strong>PITCHING EVENT:</strong> Takeda Digital Healthcare Innovation Challenge<br />
-               Check out <a href="http://www.meetup.com/TechTalks-ph-Manila/events/231904505/">here</a>
-            </li>
-
-            <li><span class="starts-at">6</span>
-            <strong>DATA DRIVEN ROCKS:</strong> Google Analytics Foundations <br />
-               Check out <a href="http://www.meetup.com/data-driven-rocks/events/231617434/">here</a>
-            </li>
-
+            {% for event in site.data.events %}
+              <li>
+                {% assign eventdate = event.complete_date %}
+                {% assign date = eventdate | split: '-' %}
+                <span class="starts-at">{% date[2] %}</span>
+                 <strong>{% event.group %}</strong>{% event.title %}<br />
+                <a href="{% event.url %}">{% event.description %}</a>
+              </li>
+            {% endfor %}
             <li><span class="starts-at">17</span>
-            <strong>RUG-PH:</strong> 3rd Anniversary Meetup!<br /> 
+            <strong>RUG-PH:</strong> 3rd Anniversary Meetup!<br />
                Sign up <a href="http://www.meetup.com/R-Users-Group-Philippines/events/231963719/">here</a>
             </li>
 
@@ -118,7 +117,7 @@
             <strong>WEBGEEK:</strong> DevCup 2016<br />
                Hack amongst geeks<a href="https://www.eventbrite.com/e/webgeek-devcup-2016-tickets-25470242180">here</a>
             </li>
-            
+
             <li><span class="starts-at">25~26</span>
             <strong>*GEEKS ON A Beach*:</strong> 2016 <br />
               Geeks sign up <a href="http://www.meetup.com/TechTalks-ph-Manila/events/231071019/">here</a>
