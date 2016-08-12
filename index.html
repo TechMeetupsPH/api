@@ -41,7 +41,7 @@ layout: page
             <ul class="meetups">
             {% for event in site.data.events %}
               <li>
-                  <span class="starts-at">{{ event.complete_date }}</span>
+                  <span class="starts-at">{{ event.complete_date | date: "%Y-%m-%d" }}</span>
                 <strong>{{ event.group }}</strong>{{ event.title }}<br />
                 <a href="{{ event.url }}">{{ event.description }}</a>
               </li>
