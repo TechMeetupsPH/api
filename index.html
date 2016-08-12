@@ -91,11 +91,9 @@
             <ul class="meetups">
             {% for event in site.data.events %}
               <li>
-                {% assign eventdate = event.complete_date %}
-                {% assign date = eventdate | split: '-' %}
-                <span class="starts-at">{% date[2] %}</span>
-                 <strong>{% event.group %}</strong>{% event.title %}<br />
-                <a href="{% event.url %}">{% event.description %}</a>
+                  <span class="starts-at">{{ event.complete_date }}</span>
+                <strong>{{ event.group }}</strong>{{ event.title }}<br />
+                <a href="{{ event.url }}">{{ event.description }}</a>
               </li>
             {% endfor %}
             <li><span class="starts-at">17</span>
