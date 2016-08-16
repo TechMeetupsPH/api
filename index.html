@@ -8,7 +8,9 @@ layout: page
             {% for event in site.data.events %}
               <li>
                   <span class="starts-at">{{ event.complete_date | date: "%d" }}</span>
-                <strong>{{ event.group }}</strong>{{ event.title }}<br />
+
+                <h3>{{ event.group }}</h3>
+                 <h4> {{ event.title }}</h4>
                 <a href="{{ event.url }}">{{ event.description }}</a>
               </li>
             {% endfor %}
