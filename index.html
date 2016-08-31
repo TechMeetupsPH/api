@@ -2,7 +2,19 @@
 layout: page 
 ---
 <h1>TECH MEETUPS PHILIPPINES</h1>
-    <div class="meetup-content">
+
+
+<div class="blog">
+ <h1>BLOG</h1>
+ {% for post in site.posts %}
+    <p>
+    <sub>{{ post.date | date: '%B %d, %Y' }}</sub>
+        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+    </p>
+{% endfor %}
+</div>
+
+<div class="meetup-content">
         <h2>AUGUST</h2>
             <ul class="meetups">
             {% for event in site.data.events %}
