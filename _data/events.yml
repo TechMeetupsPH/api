@@ -1,56 +1,36 @@
 -
-    group: TechTalks.ph
-    title:  Takeda Digital Healthcare Innovation Challenge
+    group: Laravel Phililippines
+    title:  September Meetup
     description:  Check it out here
-    url: http://www.meetup.com/TechTalks-ph-Manila/events/231904505/
-    month:  AUGUST
-    complete_date:  2016-08-06
+    url: https://www.meetup.com/Laravel-Philippines/events/233112723/
+    month:  SEPTEMBER
+    complete_date:  2016-09-07
 -
-    group: Data Driven Rocks
-    title:  Google Analytics Foundations
-    description:  Learn more about Data Driven development
-    url: http://www.meetup.com/data-driven-rocks/events/231617434/
-    month:  AUGUST
-    complete_date:  2016-08-06
+    group: The TIDE Cebu
+    title:  Free GIT Workshop
+    description:  Check it out here
+    url: http://www.meetup.com/The-TIDE-Cebu/events/233706253/ 
+    month:  SEPTEMBER
+    complete_date:  2016-09-14
 -
-    group: RUG-PH
-    title:  R Users 3rd Anniversary Meetup
-    description:  Learn more about Rust
-    url: hhttp://www.meetup.com/R-Users-Group-Philippines/events/231963719/
-    month:  AUGUST
-    complete_date:  2016-08-17
--
-    group: HACKERNEST
-    title:  TechSocials
-    description:  Socialize with fellow geeks
-    url: https://www.facebook.com/events/1770563219825499/
-    month:  AUGUST
-    complete_date:  2016-08-17
+    group: Startup Weekend
+    title:  Startup Weekend QC @ADMU
+    description:  Validate pa more!
+    url: https://www.eventbrite.com/e/startup-weekend-qc-admu-0916-tickets-26656459187
+    month:  SEPTEMBER
+    complete_date:  2016-09-16
 -
     group: JAVASCRIPT Manila
-    title:  Gotta Catch 'Em All
-    description:  Lets learn more about JS in the wild
-    url: http://www.meetup.com/ManilaJavaScript/events/232797245/
-    month:  AUGUST
-    complete_date:  2016-08-18
+    title:  Spending our Cache in Cebu
+    description:  Javascript Manila visits Cebu!
+    url: http://www.meetup.com/ManilaJavaScript/events/233410479/
+    month:  SEPTEMBER
+    complete_date:  2016-09-16
 -
-    group: WEBGEEK
-    title:  DevCup 2016
-    description:  Mag Hackathon tayo!
-    url: https://www.eventbrite.com/e/webgeek-devcup-2016-tickets-25470242180
-    month:  AUGUST
-    complete_date:  2016-08-20
--
-    group: TechTalks.PH
-    title:  Geeks On A Beach 2016
-    description:  Have fun at the beach with fellow geeks
-    url: http://www.meetup.com/TechTalks-ph-Manila/events/231071019/
-    month:  AUGUST
-    complete_date:  2016-08-25
--
-    group: UNION BANK
-    title:  "U:HACK Manila"
-    description:  Union Bank's first hackathon! Sali na!
-    url: https://www.eventbrite.com/e/uhac-manila-unionbank-hackathon-tickets-26389901907
-    month:  AUGUST
-    complete_date:  2016-08-27
+    group: Next Money
+    title:  FinTech Meetup No. 1
+    description:  Let's Talk FinTech!
+    url: https://www.facebook.com/events/1668987993417858/
+    month:  SEPTEMBER
+    complete_date:  2016-09-22
+
