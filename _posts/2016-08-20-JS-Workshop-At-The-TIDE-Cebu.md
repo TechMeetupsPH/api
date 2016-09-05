@@ -1,3 +1,9 @@
+---
+layout: post
+title: Javascript Workshop at the TIDE Cebu
+---
+
+
 JS Workshop - August 20, 2016
 ===========================================
 
