@@ -1,36 +1,49 @@
 -
-    group: Laravel Phililippines
-    title:  September Meetup
-    description:  Check it out here
-    url: https://www.meetup.com/Laravel-Philippines/events/233112723/
-    month:  SEPTEMBER
-    complete_date:  2016-09-07
+    group: Indigitous
+    title:  Indigitous Hack Manila
+    description: Hack Manila's Hackathon
+    url: https://www.eventbrite.com/e/indigitous-hack-manila-slot-confirmation-tickets-28601718510
+    month:  NOVEMBER
+    complete_date:  2016-11-04
+-
+    group: DevCon
+    title: DevCon Summit 2016 DevFutureForward
+    description: The annual DevCon conference!
+    url: http://devcon.ph/events/devcon-summit-2016-devfutureforward
+    month: NOVEMBER
+    complete_date:  2016-11-05
+-
+    group: Data Driven Rocks
+    title: Google Analytics Foundations
+    description:  Learn about the egde performance necessary to make targetted adjustments
+    url: http://www.meetup.com/data-driven-rocks/events/xzkkslyvpbhb/
+    month: NOVEMBER
+    complete_date:  2016-11-05
 -
     group: The TIDE Cebu
-    title:  Free GIT Workshop
-    description:  Check it out here
-    url: http://www.meetup.com/The-TIDE-Cebu/events/233706253/ 
-    month:  SEPTEMBER
-    complete_date:  2016-09-14
+    title:  Coding Cafe
+    description: A   Coding Café by CebuCodeCamp — a place to code, learn, hangout. 
+    url: http://www.meetup.com/The-TIDE-Cebu/events/thrbxlyvpbqb/
+    month:  NOVEMBER
+    complete_date:  2016-11-12
 -
-    group: Startup Weekend
-    title:  Startup Weekend QC @ADMU
-    description:  Validate pa more!
-    url: https://www.eventbrite.com/e/startup-weekend-qc-admu-0916-tickets-26656459187
-    month:  SEPTEMBER
-    complete_date:  2016-09-16
+    group: Data Science Philippines
+    title: Big Data & Analytics Conference 2016
+    url: http://www.meetup.com/Data-Science-Philippines/events/234239926/
+    description: Data Science Philippines welcomes the Big Data Analytics 2016 Conference to be held on November 15, 2016 at Enderun Colleges, McKinley Hill campus! 
+    month: NOVEMBER
+    complete_date: 2016-11-15
 -
-    group: JAVASCRIPT Manila
-    title:  Spending our Cache in Cebu
-    description:  Javascript Manila visits Cebu!
-    url: http://www.meetup.com/ManilaJavaScript/events/233410479/
-    month:  SEPTEMBER
-    complete_date:  2016-09-16
--
-    group: Next Money
-    title:  FinTech Meetup No. 1
-    description:  Let's Talk FinTech!
-    url: https://www.facebook.com/events/1668987993417858/
-    month:  SEPTEMBER
-    complete_date:  2016-09-22
-
+    group: Manila Javascript
+    title:  Sweet Nodevember
+    description: Devops and Backend 
+    url: http://www.meetup.com/ManilaJavaScript/events/235071799/
+    month: NOVEMBER 
+    complete_date:  2016-11-17
+- 
+    group: Drupal Philippines  
+    title:      Drupalcamp Cebu 2016
+    description: Welcome to Drupalcamp Cebu, the third ! 
+    url: http://www.meetup.com/drupal-ph/events/231559005/
+    month: NOVEMBER 
+    complete_date:  2016-11-19
