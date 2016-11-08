@@ -1,0 +1,49 @@
+-
+    group: Indigitous
+    title:  Indigitous Hack Manila
+    description: Hack Manila's Hackathon
+    url: https://www.eventbrite.com/e/indigitous-hack-manila-slot-confirmation-tickets-28601718510
+    month:  NOVEMBER
+    complete_date:  2016-11-04
+-
+    group: DevCon
+    title: DevCon Summit 2016 DevFutureForward
+    description: The annual DevCon conference!
+    url: http://devcon.ph/events/devcon-summit-2016-devfutureforward
+    month: NOVEMBER
+    complete_date:  2016-11-05
+-
+    group: Data Driven Rocks
+    title: Google Analytics Foundations
+    description:  Learn about the egde performance necessary to make targetted adjustments
+    url: http://www.meetup.com/data-driven-rocks/events/xzkkslyvpbhb/
+    month: NOVEMBER
+    complete_date:  2016-11-05
+-
+    group: The TIDE Cebu
+    title:  Coding Cafe
+    description: A   Coding Café by CebuCodeCamp — a place to code, learn, hangout. 
+    url: http://www.meetup.com/The-TIDE-Cebu/events/thrbxlyvpbqb/
+    month:  NOVEMBER
+    complete_date:  2016-11-12
+-
+    group: Data Science Philippines
+    title: Big Data & Analytics Conference 2016
+    url: http://www.meetup.com/Data-Science-Philippines/events/234239926/
+    description: Data Science Philippines welcomes the Big Data Analytics 2016 Conference to be held on November 15, 2016 at Enderun Colleges, McKinley Hill campus! 
+    month: NOVEMBER
+    complete_date: 2016-11-15
+-
+    group: Manila Javascript
+    title:  Sweet Nodevember
+    description: Devops and Backend 
+    url: http://www.meetup.com/ManilaJavaScript/events/235071799/
+    month: NOVEMBER 
+    complete_date:  2016-11-17
+- 
+    group: Drupal Philippines  
+    title:      Drupalcamp Cebu 2016
+    description: Welcome to Drupalcamp Cebu, the third ! 
+    url: http://www.meetup.com/drupal-ph/events/231559005/
+    month: NOVEMBER 
+    complete_date:  2016-11-19

@@ -1,60 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>TechMeetupsPH</title>
-    <link href=
-    "https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css"
-    rel="stylesheet">
-    <link href="css/barebones.css" rel="stylesheet">
-<style>.starts-at { border: none}</style>
-</head>
-<body>
-    <div id="fb-root"></div>
-    <script>
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1544316885864616";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script> <img alt="TechMeetupsPH" src="img/techmeetupsph-logo.png">
-    <div class="fb-share-button" data-href="http://www.techmeetupsph.com"
-    data-layout="button_count"></div>
-    <div class="meetup-content">
-        <h1>List</h1>
-        <h2>APRIL</h2>
-        <ul class="meetups">
-            <li>
-                <span class="starts-at">28</span>RAID THE FRIDGE: Let's Talk Fintech -
-                Register at <a href=
-                "https://kickstart.doorkeeper.jp/events/43890">DoorKeeper</a>
-            </li>
+---
+layout: page
+---
+<h1 style="visibility:hidden">TECH MEETUPS PHILIPPINES</h1>
+<div class="meetup-content">
+  <h2>NOVEMBER</h2>
+  <ul class="meetups">
+  {% for event in site.data.events %}
+    <li>
+      <span class="starts-at">{{ event.complete_date | date: "%d" }}</span>
+      <a href="{{ event.url }}" title="{{ event.description }}">
+        <h3>{{ event.group }}: {{ event.title }}</h3>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
 
-            <li>
-                <span class="starts-at">29</span>STARTUP BLINK  MANILA: Finding the Right Co-Founder -
-                Register at <a href=
-                "http://www.meetup.com/StartupBlink-Manila/events/230649836/">Meetup</a>
-            </li>
-            <li>
-                <span class="starts-at">30</span>DEVCON: .NET Code Camp
-               Check out <a href=
-                "http://devcon.ph/events/net-code-camp-professionals-2016/">DevCon</a>
-            </li>
-            <li>
-                <span class="starts-at">30</span>DEVCON: Ruby on Rails Code Camp
-               Check out <a href=
-                "http://devcon.ph/events/ruby-on-rails-code-camp-professionals-2016/">DevCon</a>
-            </li>
-        </ul>
-        <iframe frameborder="0" height="600" scrolling="no" src=
-        "https://calendar.google.com/calendar/embed?src=cfad967t5t2dp78rf9g7pjuimk%40group.calendar.google.com&ctz=Asia/Manila&hl=en"
-        style="border: 0" width="800"></iframe>
-    </div><a href=
-    "https://github.com/techeventsph/techeventsph.github.io"><img alt=
-    "Fork me on GitHub" data-canonical-src=
-    "https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"
-    src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"
-    style="position: absolute; top: 0; right: 0; border: 0;"></a>
-</body>
-</html>
+  <a name="google_calendar"></a>
+
+  {% include googlecal.html %}
+
+</div>
