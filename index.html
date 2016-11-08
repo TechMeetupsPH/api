@@ -1,15 +1,25 @@
 ---
 layout: page
 ---
+{% assign daynow = site.time | date: "%d" %}
 <h1 style="visibility:hidden">TECH MEETUPS PHILIPPINES</h1>
 <div class="meetup-content">
-  <h2>NOVEMBER</h2>
-  <ul class="meetups">
-  {% for event in site.data.events %}
-    <li>
-      <span class="starts-at">{{ event.complete_date | date: "%d" }}</span>
-      <a href="{{ event.url }}" title="{{ event.description }}">
-        <h3>{{ event.group }}: {{ event.title }}</h3>
+    <h2>{{ site.time | date: "%B" | upcase }}</h2>
+      <ul class="meetups">
+      {% for event in site.data.events %}
+      <li>
+        <span class="starts-at">
+        {{ event.complete_date | date: "%d" }}
+        </span>
+        {% assign eventdate = event.complete_date | date: "%d" %}
+        {% if eventdate < daynow  %}
+            <s><a href="{{ event.url }}" title="{{ event.description }}">
+            <h3>{{ event.group }}: {{ event.title }}</h3></s>
+        {% else %}
+            <a href="{{ event.url }}" title="{{ event.description }}">
+            <h3>{{ event.group }}: {{ event.title }}</h3>
+        {% endif %}
+
       </a>
     </li>
   {% endfor %}
