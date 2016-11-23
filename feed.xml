@@ -7,9 +7,8 @@ layout: null
     <title>TechMeetupsPH</title>
     <description>Get the latest techmeetups in the Philippines</description>
 
-    <link>{{ site.url }}</link>
-
-  {% for event in site.data.events %}
+    <link>www.techmeetupsph.com</link>
+    {% for event in site.data.events %}
         <item>
           <title>{{ event.title | xml_escape }}</title>
           <description>{{ event.description | xml_escape }}</description>
