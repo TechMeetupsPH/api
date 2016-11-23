@@ -11,8 +11,8 @@ layout: null
     {% for event in site.data.events %}
         <item>
           <title>{{ event.title | xml_escape }}</title>
-          <description>{{ event.description | xml_escape }}</description>
-          <pubDate>{{ page.date | date_to_xmlschema }}</pubDate>
+          <description>{{ event.complete_date }} : {{ event.description | xml_escape }}</description>
+          <pubDate>Wed, 23 Nov 2016 03:05:52 +0800</pubDate>
           <link>{{ event.url }}</link>
           <guid isPermaLink="true">{{ event.url }}</guid>
          </item>
