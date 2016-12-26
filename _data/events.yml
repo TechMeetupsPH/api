@@ -1,49 +1,36 @@
 -
-    group: Indigitous
-    title:  Indigitous Hack Manila
-    description: Hack Manila's Hackathon
-    url: https://www.eventbrite.com/e/indigitous-hack-manila-slot-confirmation-tickets-28601718510
-    month:  NOVEMBER
-    complete_date:  2016-11-04
+    group: Klab
+    title:  Getting Started with Python
+    description:  Learn to Python 
+    url: https://www.eventbrite.com/e/getting-started-with-python-a-free-seminar-tickets-29882176394
+    month:  JANUARY
+    complete_date:  2017-01-05
 -
-    group: DevCon
-    title: DevCon Summit 2016 DevFutureForward
-    description: The annual DevCon conference!
-    url: http://devcon.ph/events/devcon-summit-2016-devfutureforward
-    month: NOVEMBER
-    complete_date:  2016-11-05
+    group: Coding Café
+    title: Coding Café
+    description:  a place to code, learn, hangout. Just drop by and code!   No agenda, no speakers. But we've got good, stable Interne...
+    url: http://www.meetup.com/The-TIDE-Cebu/events/thrbxlywcbsb/
+    month: JANUARY
+    complete_date:  2017-01-14
 -
-    group: Data Driven Rocks
-    title: Google Analytics Foundations
-    description:  Learn about the egde performance necessary to make targetted adjustments
-    url: http://www.meetup.com/data-driven-rocks/events/xzkkslyvpbhb/
-    month: NOVEMBER
-    complete_date:  2016-11-05
+    group: PyData Driven Rocks
+    title: PyData PH First Ever Meetup
+    description:   about the egde performance necessary to make targetted adjustments
+    url: 
+        https://www.meetup.com/PyDataPH/events/236001955/
+    month: JANUARY
+    complete_date:  2017-01-14
 -
-    group: The TIDE Cebu
-    title:  Coding Cafe
-    description: A   Coding Café by CebuCodeCamp — a place to code, learn, hangout. 
-    url: http://www.meetup.com/The-TIDE-Cebu/events/thrbxlyvpbqb/
-    month:  NOVEMBER
-    complete_date:  2016-11-12
+    group: Coding Café
+    title: Devops Docker for beginners by Coding Café 
+    description: Let's kickoff 2017 with learning the basics of Docker.
+    url: https://www.meetup.com/DevOps-Meetup-Cebu/events/236207547/
+    month:  JANUARY
+    complete_date:  2017-01-19
 -
-    group: Data Science Philippines
-    title: Big Data & Analytics Conference 2016
-    url: http://www.meetup.com/Data-Science-Philippines/events/234239926/
-    description: Data Science Philippines welcomes the Big Data Analytics 2016 Conference to be held on November 15, 2016 at Enderun Colleges, McKinley Hill campus! 
-    month: NOVEMBER
-    complete_date: 2016-11-15
--
-    group: Manila Javascript
-    title:  Sweet Nodevember
-    description: Devops and Backend 
-    url: http://www.meetup.com/ManilaJavaScript/events/235071799/
-    month: NOVEMBER 
-    complete_date:  2016-11-17
-- 
-    group: Drupal Philippines  
-    title:      Drupalcamp Cebu 2016
-    description: Welcome to Drupalcamp Cebu, the third ! 
-    url: http://www.meetup.com/drupal-ph/events/231559005/
-    month: NOVEMBER 
-    complete_date:  2016-11-19
+    group: Microsoft Philippines
+    title: USAPANG ULAP ON AZURE
+    description: VisMin Microsoft Office - 6750 Ayala Avenue - Makati City - Philippines
+    url: https://www.eventbrite.com/e/usapang-ulap-on-azure-tickets-29392878892
+    month: JANUARY
+    complete_date: 2017-01-21
