@@ -1,0 +1,36 @@
+-
+    group: Klab
+    title:  Getting Started with Python
+    description:  Learn to Python 
+    url: https://www.eventbrite.com/e/getting-started-with-python-a-free-seminar-tickets-29882176394
+    month:  JANUARY
+    complete_date:  2017-01-05
+-
+    group: Coding Café
+    title: Coding Café
+    description:  a place to code, learn, hangout. Just drop by and code!   No agenda, no speakers. But we've got good, stable Interne...
+    url: http://www.meetup.com/The-TIDE-Cebu/events/thrbxlywcbsb/
+    month: JANUARY
+    complete_date:  2017-01-14
+-
+    group: PyData Driven Rocks
+    title: PyData PH First Ever Meetup
+    description:   about the egde performance necessary to make targetted adjustments
+    url: 
+        https://www.meetup.com/PyDataPH/events/236001955/
+    month: JANUARY
+    complete_date:  2017-01-14
+-
+    group: Coding Café
+    title: Devops Docker for beginners by Coding Café 
+    description: Let's kickoff 2017 with learning the basics of Docker.
+    url: https://www.meetup.com/DevOps-Meetup-Cebu/events/236207547/
+    month:  JANUARY
+    complete_date:  2017-01-19
+-
+    group: Microsoft Philippines
+    title: USAPANG ULAP ON AZURE
+    description: VisMin Microsoft Office - 6750 Ayala Avenue - Makati City - Philippines
+    url: https://www.eventbrite.com/e/usapang-ulap-on-azure-tickets-29392878892
+    month: JANUARY
+    complete_date: 2017-01-21
