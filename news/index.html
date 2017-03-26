@@ -6,10 +6,8 @@ layout: page
    <ul>
    {% for post in site.data.news %}
       <li>
-        {% if eventdate < daynow  %}
           <a href="{{ post.url }}" title="{{ post.title }}">
             <h3>{{ post.title }}</h3></s>
-
       </a>
     </li>
   {% endfor %}
