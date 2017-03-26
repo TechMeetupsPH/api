@@ -1,0 +1,16 @@
+---
+layout: page
+---
+<h1>Tech News for Pinoys</h1>
+<h2>For those of us who live under a rock</h2>
+   <ul>
+   {% for post in site.data.news %}
+      <li>
+        {% if eventdate < daynow  %}
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <h3>{{ post.title }}</h3></s>
+
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
