@@ -1,10 +1,17 @@
 -
     group: Internet Society
     title: Internet Intermediaries Obligations, Challenges, and Opportunities When
-    description: BOOM HACKALACKA
+    description: About OBligations of internet society
     url: https://www.eventbrite.com/e/internet-intermediaries-obligations-challenges-and-opportunities-tickets-33488401711
     month: MAY
     complete_date: 2017-05-08
+-
+    group: PythonPH
+    title: Library Deep Dive
+    description: "Inspired by the our Pythonista friends in India, we're trying out a new format for our next meetup: Deep diving into Python libraries!"
+    url: https://www.meetup.com/pythonph/events/239745569/
+    month: MAY
+    complete_date: 2017-05-09
 -
     group: Tech Social
     title: HackerNest Manila May Tech Social
