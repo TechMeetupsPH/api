@@ -2,3 +2,4 @@
 .jekyll-metadata
 vendor/
 node_modules
+laradock/
