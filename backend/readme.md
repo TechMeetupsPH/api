@@ -11,3 +11,7 @@ Built with <p align="center"><img src="https://laravel.com/assets/img/components
 Pinoys in general like to click Attend and then at the last moment, cannot come. A reminder notice feature and notice of warning of non-attendance will be a feature of techmeetups. 
 
 More features to come!
+
+### References
+- [development setup](https://gitlab.com/techmeetupsph/local_setup)
+- [database schema](https://gitlab.com/techmeetupsph/database)
