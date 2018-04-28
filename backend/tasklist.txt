@@ -1,4 +1,0 @@
-1. Storyboarding - User stories -> Trello 
-2. MOckup - share again/ refine -> Editor
-3. Setup Gitlab
-4. Setup DO staging env
