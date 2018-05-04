@@ -15,3 +15,4 @@ More features to come!
 ### References
 - [development setup](https://gitlab.com/techmeetupsph/local_setup)
 - [database schema](https://gitlab.com/techmeetupsph/database)
+- [frontend](https://gitlab.com/techmeetupsph/frontend)
