@@ -16,3 +16,4 @@ More features to come!
 - [development setup](https://gitlab.com/techmeetupsph/local_setup)
 - [database schema](https://gitlab.com/techmeetupsph/database)
 - [frontend](https://gitlab.com/techmeetupsph/frontend)
+- [REST API](https://gitlab.com/techmeetupsph/techmeetupsph/wikis/REST-API)
