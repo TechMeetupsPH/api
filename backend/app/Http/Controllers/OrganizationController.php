@@ -7,8 +7,13 @@ use App\Organization;
 
 class OrganizationController extends Controller
 {
+
     public function create(Request $request)
     {
+        $request->validate([
+            'name' => 'required'
+        ]);
+
         $parameters = $request->all();
 
         $organization = new Organization();
@@ -17,5 +22,8 @@ class OrganizationController extends Controller
         $organization->address = $parameters['address'];
 
         $organization->save();
+
+        return response()->json($organization->toArray());
     }
+
 }
