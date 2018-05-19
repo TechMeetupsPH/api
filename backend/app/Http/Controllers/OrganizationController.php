@@ -11,7 +11,7 @@ class OrganizationController extends Controller
     public function create(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:255'
+            'name' => 'required|max:255|unique:organization,name'
         ]);
 
         $parameters = $request->all();

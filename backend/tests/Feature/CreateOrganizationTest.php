@@ -82,4 +82,30 @@ class CreateOrganizationTest extends TestCase
                 ]
             ]);
     }
+
+    /**
+     * @test
+     */
+     public function orgqanization_name_must_be_unique()
+     {
+        $organization = factory(Organization::class)->create([
+            'name' => 'laravelph'
+        ]);
+
+        $response = $this->json('POST', '/api/organization',[
+            'name' => 'laravelph',
+            'about' => 'about',
+            'address' => 'address',
+       ]);
+
+       $response->assertStatus(422);
+       $response->assertJson([
+               'message' => 'The given data was invalid.',
+               'errors' => [
+                   'name' => [
+                     "The name has already been taken."
+                   ]
+               ]
+           ]);
+     }
 }
