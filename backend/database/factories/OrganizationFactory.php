@@ -13,12 +13,10 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Meetup::class, function (Faker $faker) {
+$factory->define(App\Organization::class, function (Faker $faker) {
     return [
-        'title' => $faker->name,
-        'start_date' => '2018-01-05 01:01:01',
-        'end_date' => '2018-01-05 01:01:01',
-        'about' => 'About sample',
+        'name' => $faker->name,
+        'about' => $faker->name,
         'address' => $faker->address,
     ];
 });

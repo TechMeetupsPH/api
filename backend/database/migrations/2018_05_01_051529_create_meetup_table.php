@@ -18,6 +18,7 @@ class CreateMeetupTable extends Migration
             $table->string('title');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
+            $table->text('about');
             $table->string('address');
         });
     }
