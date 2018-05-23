@@ -17,3 +17,12 @@ More features to come!
 - [database schema](https://gitlab.com/techmeetupsph/database)
 - [frontend](https://gitlab.com/techmeetupsph/frontend)
 - [REST API](https://gitlab.com/techmeetupsph/techmeetupsph/wikis/REST-API)
+
+### Development Setup
+
+- [local setup repository](https://gitlab.com/techmeetupsph/local_setup) handles the configuration.
+- Additional configuration you can do that is not included in [local setup repository](https://gitlab.com/techmeetupsph/local_setup) is to populate the database:
+```
+php artisan migrate:refresh
+php artisan db:seed
+```
