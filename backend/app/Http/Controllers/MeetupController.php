@@ -11,15 +11,16 @@ class MeetupController extends Controller
     {
         $meetups = Meetup::all();
         return response()->json($meetups->toArray());
-    }
+    }   
 
     public function create(Request $request)
     {
         $request->validate([
             'title' => 'required|max:256',
-            'start_date' => 'required',
-            'end_date' => 'required',
-            'address' => 'required',
+            'start_date' => 'required|date_format: YYYY-MM-DD HH:MM:SS',
+            'end_date' => 'required|date_format: YYYY-MM-DD HH:MM:SS',
+            'about' => 'required|max:512',
+            'address' => 'required|max:512',
         ]);
 
         $parameters = $request->all();
