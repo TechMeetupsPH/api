@@ -215,7 +215,7 @@ class CreateMeetupsTest extends TestCase
         $response->assertStatus(422);
         $response->assertJson([
                 'message' => 'The given data was invalid.',
-                'address' => [
+                'errors' => [
                     'address' => [
                         'The address may not be greater than 512 characters.'
                     ]
@@ -243,7 +243,7 @@ class CreateMeetupsTest extends TestCase
             'message' => 'The given data was invalid.',
             'errors' => [
                 "start_date" => [
-                    "The start date does not match the format  YYYY-MM-DD HH:MM:SS."
+                    "The start date does not match the format Y-m-d H:i:s."
                 ]
 
             ]
@@ -268,7 +268,7 @@ class CreateMeetupsTest extends TestCase
             'message' => 'The given data was invalid.',
             'errors' => [
                 "end_date" => [
-                    "The end date does not match the format  YYYY-MM-DD HH:MM:SS."
+                    "The end date does not match the format Y-m-d H:i:s."
                 ]
 
             ]
