@@ -17,8 +17,8 @@ class MeetupController extends Controller
     {
         $request->validate([
             'title' => 'required|max:256',
-            'start_date' => 'required|date_format: YYYY-MM-DD HH:MM:SS',
-            'end_date' => 'required|date_format: YYYY-MM-DD HH:MM:SS',
+            'start_date' => 'required|date_format:Y-m-d H:i:s',
+            'end_date' => 'required|date_format:Y-m-d H:i:s',
             'about' => 'required|max:512',
             'address' => 'required|max:512',
         ]);
