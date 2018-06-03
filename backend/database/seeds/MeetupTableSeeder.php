@@ -20,6 +20,7 @@ class MeetupTableSeeder extends Seeder
             'end_date' =>  '2018-07-21 16:00:00',
             'address' => 'CoffeeBean Shangri-La',
             'summary_image_url' => 'http://localhost:8080/images/users/coffee.jpeg',
+            'city' => 'Makati',
         ]);
 
         DB::table('meetup')->insert([
@@ -30,6 +31,7 @@ class MeetupTableSeeder extends Seeder
             'end_date' =>  '2018-06-27 21:00:00',
             'address' => 'TBD',
             'summary_image_url' => 'http://localhost:8080/images/users/laravel.jpeg',
+            'city' => 'TBD',
         ]);
 
         DB::table('meetup')->insert([
@@ -40,6 +42,7 @@ class MeetupTableSeeder extends Seeder
             'end_date' =>  '2018-07-14 16:00:00',
             'address' => 'TBD',
             'summary_image_url' => 'http://localhost:8080/images/users/meetup.jpg',
+            'city' => 'TBD',
         ]);
     }
 }

@@ -21,6 +21,7 @@ class MeetupController extends Controller
             'end_date' => 'required|date_format:Y-m-d H:i:s',
             'about' => 'required|max:512',
             'address' => 'required|max:512',
+            'city' => 'required|max:255',
         ]);
 
         $parameters = $request->all();
@@ -31,6 +32,7 @@ class MeetupController extends Controller
         $meetup->end_date = $parameters['end_date'];
         $meetup->about = $parameters['about'];
         $meetup->address = $parameters['address'];
+        $meetup->city = $parameters['city'];
 
         $meetup->save();
 

@@ -21,5 +21,6 @@ $factory->define(App\Meetup::class, function (Faker $faker) {
         'about' => 'About sample',
         'address' => $faker->address,
         'summary_image_url' => $faker->url,
+        'city' => $faker->city,
     ];
 });
