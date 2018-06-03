@@ -7,9 +7,16 @@ use App\Meetup;
 
 class MeetupController extends Controller
 {
+    private $meetup;
+
+    public function __construct(Meetup $meetup)
+    {
+        $this->meetup = $meetup;
+    }
+
     public function list()
     {
-        $meetups = Meetup::all();
+        $meetups = $this->meetup->all();
         return response()->json($meetups->toArray());
     }   
 
