@@ -20,5 +20,6 @@ $factory->define(App\Meetup::class, function (Faker $faker) {
         'end_date' => '2018-01-05 01:01:01',
         'about' => 'About sample',
         'address' => $faker->address,
+        'summary_image_url' => $faker->url,
     ];
 });
