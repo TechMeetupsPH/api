@@ -20,6 +20,8 @@ class CreateMeetupTable extends Migration
             $table->dateTime('end_date');
             $table->text('about');
             $table->string('address');
+            $table->string('summary_image_url')->nullable();
+            $table->string('city');
         });
     }
 

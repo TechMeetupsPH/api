@@ -22,6 +22,7 @@ class CreateMeetupsTest extends TestCase
             'end_date' => '2018-05-23 08:00:00',
             'about' => 'Test About',
             'address' => 'Test Address',
+            'city' => 'Test City',
         ]);
 
         $response->assertStatus(200);
@@ -275,8 +276,59 @@ class CreateMeetupsTest extends TestCase
         ]);
     }
 
+    /**
+     * @test
+     */
+    public function city_is_required()
+    {
+        $response = $this->json('POST', '/api/meetup',[
+            'title' => 'Test City',
+            'start_date' => '2018-05-23 06:00:00',
+            'end_date' => '2018-05-23 08:00:00',
+            'about' => 'Test About',
+            'address' => 'Test Address',
+        ]);
 
+        $response->assertStatus(422);
+        $response->assertJson([
+            'message' => 'The given data was invalid.',
+            'errors' => [
+                'city' => [
+                    'The city field is required.'
+                ]
+            ]
+        ]);
+    }
 
+    /**
+     * @test
+     */
+    public function city_character_must_not_exceed_255()
+    {
 
+        $city = "";
 
+        for ($i = 0; $i <= 255; $i++) {
+            $city .= "a";
+        }
+
+        $response = $this->json('POST', '/api/meetup',[
+            'title' => 'Test City',
+            'start_date' => '2018-05-23 06:00:00',
+            'end_date' => '2018-05-23 08:00:00',
+            'about' => 'Test About',
+            'address' => 'Test Address',
+            'city' => $city,
+        ]);
+
+        $response->assertStatus(422);
+        $response->assertJson([
+            'message' => 'The given data was invalid.',
+            'errors' => [
+                'city' => [
+                    'The city may not be greater than 255 characters.'
+                ]
+            ]
+        ]);
+    }
 }
