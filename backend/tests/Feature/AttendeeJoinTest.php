@@ -4,7 +4,10 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Mail;
 use App\Attendee;
+use App\Meetup;
+use App\Mail\AttendeeJoined;
 
 class AttendeeJoinTest extends TestCase
 {
@@ -15,20 +18,29 @@ class AttendeeJoinTest extends TestCase
      */
     public function attendee_can_join_meetups()
     {
-
         $this->withoutExceptionHandling();
 
+        Mail::fake();
+
+        $meetup = factory(Meetup::class)->create();
+
+        $email = 'guest@tech.com';
+
         $response = $this->post('/api/attendee', [
-            'email' => 'guest@tech.com',
-            'meetup_id' => 1
+            'email' => $email,
+            'meetup_id' => $meetup->id
         ]);
+
+        Mail::assertSent(AttendeeJoined::class, function ($mail) use ($meetup, $email) {
+            return $mail->hasTo($email);
+        });
 
         $response->assertStatus(200); 
 
         $response->assertJson([
             'id' => 1,
             'email' => 'guest@tech.com',
-            'meetup_id' => 1
+            'meetup_id' => $meetup->id
         ]);
 
         $attendee = Attendee::where('id', '=', 1)->first();

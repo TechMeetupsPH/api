@@ -3,10 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Attendee;
+use \Mail;
+
+use App\Attendee; 
+use App\Meetup;
+use App\Mail\AttendeeJoined;
 
 class AttendeeController extends Controller
 {
+    private $meetup;
+
+    public function __construct(Meetup $meetup)
+    {
+        $this->meetup = $meetup;
+    }
+
     public function create(Request $request)
     {
         $parameters = $request->all();
@@ -16,6 +27,10 @@ class AttendeeController extends Controller
         $attendee->meetup_id = $parameters['meetup_id'];
         $attendee->save();
 
-        return response()->json($attendee->save());
+        $meetup = $this->meetup->find($attendee->meetup_id)->firstOrFail();
+
+        Mail::to($parameters['email'])->send(new AttendeeJoined($meetup, $attendee));
+
+        return response()->json($attendee);
     }
 }
