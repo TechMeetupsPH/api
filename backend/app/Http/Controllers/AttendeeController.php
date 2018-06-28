@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Attendee;
 
+
 class AttendeeController extends Controller
 {
     public function create(Request $request)
-    {
+    {   
+        $request->validate([
+            'meetup_id' => 'exists:meetup,id',   
+        ]);
+        
         $parameters = $request->all();
 
         $attendee = new Attendee();
@@ -18,4 +23,5 @@ class AttendeeController extends Controller
 
         return response()->json($attendee->save());
     }
+
 }
