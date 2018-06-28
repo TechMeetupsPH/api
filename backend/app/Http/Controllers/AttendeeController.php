@@ -29,8 +29,20 @@ class AttendeeController extends Controller
 
         $meetup = $this->meetup->find($attendee->meetup_id)->firstOrFail();
 
-        Mail::to($parameters['email'])->send(new AttendeeJoined($meetup, $attendee));
+        try {
+            Mail::to($parameters['email'])->send(new AttendeeJoined($meetup, $attendee));
+        } catch (\Exception $e) {
+            return response()->json([
+                'attendee' =>  $attendee,
+                'meetup' => $meetup,
+                'is_email_sent' => false,
+            ]);
+        }
 
-        return response()->json($attendee);
+        return response()->json([
+            'attendee' =>  $attendee,
+            'meetup' => $meetup,
+            'is_email_sent' => true
+        ]);
     }
 }
