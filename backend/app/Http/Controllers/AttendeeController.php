@@ -19,9 +19,7 @@ class AttendeeController extends Controller
         $attendee = new Attendee();
         $attendee->email = $parameters['email'];
         $attendee->meetup_id = $parameters['meetup_id'];
-        $attendee->unique( array('email','meetup_id') );
         $attendee->save();
-
         return response()->json($attendee->save());
     }
 
