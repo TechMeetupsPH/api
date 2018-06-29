@@ -44,7 +44,57 @@ class AttendeeJoinTest extends TestCase
         $response->assertJson([
             'attendee' => $attendee->toArray(),
             'meetup' => $meetup->toArray(),
-            'is_email_sent' => true
+            'is_email_sent' => true,
         ]);
     }
+  
+    /**
+     * @test
+     */
+    public function attendee_should_join_existing_meetups()
+    {
+        $meetup = factory(Meetup::class)->create([
+            'id' => 1,
+        ]);
+        
+        $response = $this->json('POST', '/api/attendee', [
+            'email' => 'guest@tech.com',
+            'meetup_id' => 2,
+        ]);
+
+        $response->assertStatus(422);
+        $response->assertJson([
+                'message' => 'The given data was invalid.',
+                'errors' => [
+                    'meetup_id' => [
+                        'The selected meetup id is invalid.',
+                ]
+            ]
+        ]);
+    }
+    
+    /**
+     * 
+     */
+    public function email_and_meetup_id_should_be_unique()
+    {
+        $email = array('guest@tech.com','guest@tech.com');
+        $meetupid =array( 3, 3);
+        $response = $this->json('POST', '/api/attendee', [
+            'email' => $email,
+            'meetup_id' => $meetupid,
+        ]);
+
+        $response->assertStatus(422);
+        $response->assertJson([
+                'message' => 'The given data was invalid.',
+                'errors' => [
+                    'unique_multiple' => [
+                        'The email and meetup_id field already exists.'
+                ]
+            ]
+        ]);
+    }
+
+
 }

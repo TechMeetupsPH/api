@@ -9,6 +9,7 @@ use App\Attendee;
 use App\Meetup;
 use App\Mail\AttendeeJoined;
 
+
 class AttendeeController extends Controller
 {
     private $meetup;
@@ -19,7 +20,11 @@ class AttendeeController extends Controller
     }
 
     public function create(Request $request)
-    {
+    {   
+        $request->validate([
+            'meetup_id' => 'exists:meetup,id',  
+            'unique_email_meetup_id' => 'unique_multiple:attendee,email,meetup_id' 
+        ]);
         $parameters = $request->all();
 
         $attendee = new Attendee();
@@ -45,4 +50,5 @@ class AttendeeController extends Controller
             'is_email_sent' => true
         ]);
     }
+
 }
