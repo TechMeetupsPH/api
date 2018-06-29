@@ -79,17 +79,18 @@ class AttendeeJoinTest extends TestCase
     public function email_and_meetup_id_should_be_unique()
     {
         $email = array('guest@tech.com','guest@tech.com');
-        $meetupid =array( 3, 3);
+        $meetupId = array(3,3);
+        
         $response = $this->json('POST', '/api/attendee', [
             'email' => $email,
-            'meetup_id' => $meetupid,
+            'meetup_id' => $meetupId,
         ]);
 
         $response->assertStatus(422);
         $response->assertJson([
                 'message' => 'The given data was invalid.',
                 'errors' => [
-                    'unique_multiple' => [
+                    'unique_email_meetup_id' => [
                         'The email and meetup_id field already exists.'
                 ]
             ]
