@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 
 class MeetupTableSeeder extends Seeder
 {
@@ -19,7 +20,7 @@ class MeetupTableSeeder extends Seeder
             'start_date' =>  '2018-07-21 14:00:00',
             'end_date' =>  '2018-07-21 16:00:00',
             'address' => 'CoffeeBean Shangri-La',
-            'summary_image_url' => 'http://localhost:8080/images/users/coffee.jpeg',
+            'summary_image_url' => URL::current() . '/images/users/coffee.jpeg',
             'city' => 'Makati',
         ]);
 
@@ -30,7 +31,7 @@ class MeetupTableSeeder extends Seeder
             'start_date' =>  '2018-06-27 19:00:00',
             'end_date' =>  '2018-06-27 21:00:00',
             'address' => 'TBD',
-            'summary_image_url' => 'http://localhost:8080/images/users/laravel.jpeg',
+            'summary_image_url' => URL::current() . '/images/users/laravel.jpeg',
             'city' => 'TBD',
         ]);
 
@@ -41,7 +42,7 @@ class MeetupTableSeeder extends Seeder
             'start_date' =>  '2018-07-14 14:00:00',
             'end_date' =>  '2018-07-14 16:00:00',
             'address' => 'TBD',
-            'summary_image_url' => 'http://localhost:8080/images/users/meetup.jpg',
+            'summary_image_url' => URL::current() . '/images/users/meetup.png',
             'city' => 'TBD',
         ]);
     }
