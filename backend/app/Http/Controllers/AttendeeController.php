@@ -21,11 +21,11 @@ class AttendeeController extends Controller
 
     public function create(Request $request)
     {   
-        $request->validate([
-            'meetup_id' => 'exists:meetup,id',  
-            'unique_email_meetup_id' => 'unique_multiple:attendee,email,meetup_id' 
-        ]);
         $parameters = $request->all();
+
+        $request->validate([
+            'meetup_id' => 'exists:meetup,id|unique_attendee:' . $parameters['email'],
+        ]);
 
         $attendee = new Attendee();
         $attendee->email = $parameters['email'];

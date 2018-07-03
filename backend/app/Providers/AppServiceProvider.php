@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Validator;
 
+use DB;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -16,16 +18,17 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        Validator::extend('unique_multiple', function ($attribute, $value, $parameters, $validator)
+        Validator::extend('unique_attendee', function ($attribute, $value, $parameters, $validator)
         {
-            $fields = $validator->getData();
-            $table = array_shift($parameters);
-            $query = DB::table($table);
+            $count = DB::table('attendee')->where('meetup_id', $value)
+                                          ->where('email', $parameters[0])
+                                          ->count();
 
-            foreach ($parameters as $i => $field) {
-                $query->where($field, $fields[$field]);
-            }
-            return ($query->count() == 0);
+            return $count === 0;
+        });
+
+        Validator::replacer('unique_attendee', function ($message, $attribute, $rule, $parameters) {
+            return 'The email and meetup_id field already exists.';
         });
     }
 
