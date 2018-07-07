@@ -16,6 +16,7 @@ class CreateAttendeeTable extends Migration
         Schema::create('attendee', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('meetup_id');
+            $table->string('name');
             $table->string('email');
         });
     }
