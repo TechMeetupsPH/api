@@ -98,11 +98,9 @@ class AttendeeJoinTest extends TestCase
                 'message' => 'The given data was invalid.',
                 'errors' => [
                     'meetup_id' => [
-                        'The email and meetup_id field already exists.'
+                        'You already joined in this meetup.'
                 ]
             ]
         ]);
     }
-
-
 }

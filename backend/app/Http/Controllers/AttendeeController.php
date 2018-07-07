@@ -8,6 +8,7 @@ use \Mail;
 use App\Attendee; 
 use App\Meetup;
 use App\Mail\AttendeeJoined;
+use App\Http\Requests\StoreAttendee;
 
 
 class AttendeeController extends Controller
@@ -19,13 +20,9 @@ class AttendeeController extends Controller
         $this->meetup = $meetup;
     }
 
-    public function create(Request $request)
-    {   
+    public function create(StoreAttendee $request)
+    {
         $parameters = $request->all();
-
-        $request->validate([
-            'meetup_id' => 'exists:meetup,id|unique_attendee:' . $parameters['email'],
-        ]);
 
         $attendee = new Attendee();
         $attendee->email = $parameters['email'];

@@ -26,10 +26,6 @@ class AppServiceProvider extends ServiceProvider
 
             return $count === 0;
         });
-
-        Validator::replacer('unique_attendee', function ($message, $attribute, $rule, $parameters) {
-            return 'The email and meetup_id field already exists.';
-        });
     }
 
     /**
