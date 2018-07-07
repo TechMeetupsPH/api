@@ -24,6 +24,7 @@ class AttendeeController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'email' => 'required|email'
         ]);
         $parameters = $request->all();
 

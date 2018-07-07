@@ -132,4 +132,55 @@ class AttendeeJoinTest extends TestCase
             ]
         ]);
     }
+
+     
+    /**
+     * @test
+     */
+    public function email_field_is_required()
+    {
+        $meetup = factory(Meetup::class)->create();
+        $meetupId = $meetup->id;
+
+        $response = $this->json('POST', '/api/attendee', [
+            'name' => 'user',
+            'meetup_id' => $meetupId,
+        ]);
+
+        $response->assertStatus(422);
+        $response->assertJson([
+                'message' => 'The given data was invalid.',
+                'errors' => [
+                    'email' => [
+                        'The email field is required.'
+                ]
+            ]
+        ]);
+    }
+
+       
+    /**
+     * @test
+     */
+    public function email_format_should_be_valid()
+    {
+        $meetup = factory(Meetup::class)->create();
+        $meetupId = $meetup->id;
+
+        $response = $this->json('POST', '/api/attendee', [
+            'name' => 'user',
+            'email' => 'guestuser',
+            'meetup_id' => $meetupId,
+        ]);
+
+        $response->assertStatus(422);
+        $response->assertJson([
+                'message' => 'The given data was invalid.',
+                'errors' => [
+                    'email' => [
+                        'The email must be a valid email address.'
+                ]
+            ]
+        ]);
+    }
 }
