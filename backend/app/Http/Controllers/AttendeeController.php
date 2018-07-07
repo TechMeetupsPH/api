@@ -23,9 +23,14 @@ class AttendeeController extends Controller
 
     public function create(StoreAttendee $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email'
+        ]);
         $parameters = $request->all();
 
         $attendee = new Attendee();
+        $attendee->name = $parameters['name'];
         $attendee->email = $parameters['email'];
         $attendee->meetup_id = $parameters['meetup_id'];
         $attendee->save();

@@ -26,7 +26,10 @@ class AttendeeJoinTest extends TestCase
 
         $email = 'guest@tech.com';
 
+        $name = 'user';
+
         $response = $this->post('/api/attendee', [
+            'name' => $name,
             'email' => $email,
             'meetup_id' => $meetup->id
         ]);
@@ -37,6 +40,7 @@ class AttendeeJoinTest extends TestCase
 
         $attendee = Attendee::where('id', '=', 1)->first();
         $this->assertEquals($attendee->id, 1);
+        $this->assertEquals($attendee->name, 'user');
         $this->assertEquals($attendee->email, 'guest@tech.com');
         $this->assertEquals($attendee->meetup_id, 1);
 
@@ -58,6 +62,7 @@ class AttendeeJoinTest extends TestCase
         ]);
         
         $response = $this->json('POST', '/api/attendee', [
+            'name' => 'user',
             'email' => 'guest@tech.com',
             'meetup_id' => 2,
         ]);
@@ -99,6 +104,81 @@ class AttendeeJoinTest extends TestCase
                 'errors' => [
                     'meetup_id' => [
                         'You already joined in this meetup.'
+                ]
+            ]
+        ]);
+    }
+    
+    /**
+     * @test
+     */
+    public function name_field_is_required()
+    {
+        $meetup = factory(Meetup::class)->create();
+        $meetupId = $meetup->id;
+
+        $response = $this->json('POST', '/api/attendee', [
+            'email' => 'guest@tech.com',
+            'meetup_id' => $meetupId,
+        ]);
+
+        $response->assertStatus(422);
+        $response->assertJson([
+                'message' => 'The given data was invalid.',
+                'errors' => [
+                    'name' => [
+                        'The name field is required.'
+                ]
+            ]
+        ]);
+    }
+
+     
+    /**
+     * @test
+     */
+    public function email_field_is_required()
+    {
+        $meetup = factory(Meetup::class)->create();
+        $meetupId = $meetup->id;
+
+        $response = $this->json('POST', '/api/attendee', [
+            'name' => 'user',
+            'meetup_id' => $meetupId,
+        ]);
+
+        $response->assertStatus(422);
+        $response->assertJson([
+                'message' => 'The given data was invalid.',
+                'errors' => [
+                    'email' => [
+                        'The email field is required.'
+                ]
+            ]
+        ]);
+    }
+
+       
+    /**
+     * @test
+     */
+    public function email_format_should_be_valid()
+    {
+        $meetup = factory(Meetup::class)->create();
+        $meetupId = $meetup->id;
+
+        $response = $this->json('POST', '/api/attendee', [
+            'name' => 'user',
+            'email' => 'guestuser',
+            'meetup_id' => $meetupId,
+        ]);
+
+        $response->assertStatus(422);
+        $response->assertJson([
+                'message' => 'The given data was invalid.',
+                'errors' => [
+                    'email' => [
+                        'The email must be a valid email address.'
                 ]
             ]
         ]);
