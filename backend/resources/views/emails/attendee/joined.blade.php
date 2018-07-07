@@ -1,18 +1,31 @@
 <p>
 Hi,
 </p>
+
 <p>
-Your confirmed.
+You've succesfully joined the meetup <strong>{{ $title }}</strong>.
+Please take note of the following details:
 </p>
-<h3>
-{{ $title }}
-</h3>
-<h3>
-{{ $start_date }} - {{ $end_date }}
-</h3>
-<h3>
-{{ $address }}
-</h3>
-<h3>
-{{ $city }}
-</h3>
+
+<ul>
+    <li>
+        When: {{ $start_date }} - {{ $end_date }}
+    </li>
+    <li>
+        Where: {{ $address }}, {{ $city }}
+    </li>
+</ul>
+
+<p>
+    For any inquiries, please contact our organization admin Joe Palala at 09565641269.
+</p>
+
+<p>
+    We're looking forward to meeting you soon!
+</p>
+
+<p>
+    Cheers,
+    <br/>
+    Techmeetups PH team
+</p>
