@@ -42,8 +42,8 @@ class AttendeeJoined extends Mailable
                     ->with([
                         'email' => $this->attendee->email,
                         'title' => $this->meetup->title,
-                        'start_date' => $this->meetup->start_date,
-                        'end_date' => $this->meetup->end_date,
+                        'start_date' => $this->meetup->getFormattedStartDate(),
+                        'end_date' => $this->meetup->getFormattedEndDate(),
                         'address' => $this->meetup->address,
                         'city' => $this->meetup->city 
                     ]);
