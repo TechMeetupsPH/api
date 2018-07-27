@@ -15,7 +15,10 @@ class CreateAttendeeTable extends Migration
     {
         Schema::create('attendee', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('meetup_id');
+            $table->integer('meetup_id')->unsigned();
+            $table->foreign('meetup_id')
+                  ->references('id')
+                  ->on('meetup');
             $table->string('name');
             $table->string('email');
         });

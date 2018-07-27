@@ -35,13 +35,15 @@ class AttendeeJoined extends Mailable
      */
     public function build()
     {
+        $subject = "Techmeetups PH - Registration Successful: " . $this->meetup->title;
         return $this->from('no-reply@techmeetups.ph.com')
+                    ->subject($subject)
                     ->view('emails.attendee.joined')
                     ->with([
                         'email' => $this->attendee->email,
                         'title' => $this->meetup->title,
-                        'start_date' => $this->meetup->start_date,
-                        'end_date' => $this->meetup->end_date,
+                        'start_date' => $this->meetup->getFormattedStartDate(),
+                        'end_date' => $this->meetup->getFormattedEndDate(),
                         'address' => $this->meetup->address,
                         'city' => $this->meetup->city 
                     ]);

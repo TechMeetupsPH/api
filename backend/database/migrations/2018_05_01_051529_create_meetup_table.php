@@ -14,11 +14,11 @@ class CreateMeetupTable extends Migration
     public function up()
     {
         Schema::create('meetup', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('title');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
-            $table->text('about');
+            $table->text('detail');
             $table->string('address');
             $table->string('summary_image_url')->nullable();
             $table->string('city');

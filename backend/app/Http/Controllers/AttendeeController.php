@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \Mail;
+use \Log;
 
 use App\Attendee; 
 use App\Meetup;
@@ -39,6 +40,7 @@ class AttendeeController extends Controller
         try {
             Mail::to($parameters['email'])->send(new AttendeeJoined($meetup, $attendee));
         } catch (\Exception $e) {
+            Log::error($e->getMessage());
             return response()->json([
                 'attendee' =>  $attendee,
                 'meetup' => $meetup,

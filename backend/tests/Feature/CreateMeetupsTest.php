@@ -20,7 +20,7 @@ class CreateMeetupsTest extends TestCase
             'title' => 'Test Title',
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Test Address',
             'city' => 'Test City',
         ]);
@@ -32,7 +32,7 @@ class CreateMeetupsTest extends TestCase
         $this->assertEquals($meetup->title, 'Test Title');
         $this->assertEquals($meetup->start_date, '2018-05-23 06:00:00');
         $this->assertEquals($meetup->end_date, '2018-05-23 08:00:00');
-        $this->assertEquals($meetup->about, 'Test About');
+        $this->assertEquals($meetup->detail, 'Test About');
         $this->assertEquals($meetup->address, 'Test Address');
     }
 
@@ -44,7 +44,7 @@ class CreateMeetupsTest extends TestCase
         $response = $this->json('POST', '/api/meetup',[
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Test Address',
         ]);
 
@@ -67,7 +67,7 @@ class CreateMeetupsTest extends TestCase
         $response = $this->json('POST', '/api/meetup',[
            'title' => 'Test Title',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Test Address',
         ]);
 
@@ -90,7 +90,7 @@ class CreateMeetupsTest extends TestCase
         $response = $this->json('POST', '/api/meetup',[
             'title' => 'Test Title',
             'start_date' => '2018-05-23 06:00:00',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Test Address',
         ]);
 
@@ -114,7 +114,7 @@ class CreateMeetupsTest extends TestCase
             'title' => 'Test Title',
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'Test About',
+            'detail' => 'Test About',
         ]);
 
         $response->assertStatus(422);
@@ -145,7 +145,7 @@ class CreateMeetupsTest extends TestCase
                       The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'about',
+            'detail' => 'detail',
             'address' => 'address'
         ]);
 
@@ -163,13 +163,13 @@ class CreateMeetupsTest extends TestCase
     /**
      * @test
      */
-    public function meetup_about_max_characters_should_be_512()
+    public function meetup_detail_max_characters_should_be_512()
     {
         $response = $this->json('POST' , '/api/meetup',[
             'title' => 'Test Title',
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'Contrary to popular belief, Lorem Ipsum is not simply random text.
+            'detail' => 'Contrary to popular belief, Lorem Ipsum is not simply random text.
                     It has roots in a piece of classical Latin literature from 45 BC, making it over
                     2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
                     Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
@@ -185,8 +185,8 @@ class CreateMeetupsTest extends TestCase
         $response->assertJson([
                 'message' => 'The given data was invalid.',
                 'errors' => [
-                    'about' => [
-                        'The about may not be greater than 512 characters.'
+                    'detail' => [
+                        'The detail may not be greater than 512 characters.'
                     ]
                 ]
         ]);
@@ -201,7 +201,7 @@ class CreateMeetupsTest extends TestCase
             'title' => 'Test Title',
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Contrary to popular belief, Lorem Ipsum is not simply random text.
                     It has roots in a piece of classical Latin literature from 45 BC, making it over
                     2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
@@ -235,7 +235,7 @@ class CreateMeetupsTest extends TestCase
             'title' => 'Test Title',
             'start_date' => '2018/05/23',
             'end_date' => '2018/05/23',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Test Address',
         ]);
     
@@ -260,7 +260,7 @@ class CreateMeetupsTest extends TestCase
             'title' => 'Test Title',
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018/05/23',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Test Address',
         ]);
     
@@ -285,7 +285,7 @@ class CreateMeetupsTest extends TestCase
             'title' => 'Test City',
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Test Address',
         ]);
 
@@ -316,7 +316,7 @@ class CreateMeetupsTest extends TestCase
             'title' => 'Test City',
             'start_date' => '2018-05-23 06:00:00',
             'end_date' => '2018-05-23 08:00:00',
-            'about' => 'Test About',
+            'detail' => 'Test About',
             'address' => 'Test Address',
             'city' => $city,
         ]);

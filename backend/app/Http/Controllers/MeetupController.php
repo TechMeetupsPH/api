@@ -26,7 +26,7 @@ class MeetupController extends Controller
             'title' => 'required|max:256',
             'start_date' => 'required|date_format:Y-m-d H:i:s',
             'end_date' => 'required|date_format:Y-m-d H:i:s',
-            'about' => 'required|max:512',
+            'detail' => 'required|max:512',
             'address' => 'required|max:512',
             'city' => 'required|max:255',
         ]);
@@ -37,7 +37,7 @@ class MeetupController extends Controller
         $meetup->title = $parameters['title'];
         $meetup->start_date = $parameters['start_date'];
         $meetup->end_date = $parameters['end_date'];
-        $meetup->about = $parameters['about'];
+        $meetup->detail = $parameters['detail'];
         $meetup->address = $parameters['address'];
         $meetup->city = $parameters['city'];
 
