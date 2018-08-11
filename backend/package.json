@@ -1,6 +1,8 @@
 {
     "private": true,
     "scripts": {
+        "browserify": "browserify resources/assets/js/app.js -o public/js/app.js -t [babelify --presets [es2015]]",
+        "sass": "sass resources/assets/sass/app.scss > public/css/app.css",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
@@ -11,12 +13,25 @@
     },
     "devDependencies": {
         "axios": "^0.18",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-es2015": "^6.24.1",
+        "babelify": "^8.0.0",
         "bootstrap": "^4.0.0",
-        "popper.js": "^1.12",
+        "browserify": "^16.2.2",
         "cross-env": "^5.1",
-        "jquery": "^3.2",
+        "jquery": "^3.3.1",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
+        "popper.js": "^1.12",
+        "sass": "^1.10.3",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.2.0",
+        "@fortawesome/fontawesome-free-brands": "^5.0.13",
+        "bulma": "^0.7.1",
+        "font-awesome": "^4.7.0",
+        "materialize-css": "^1.0.0-rc.2"
     }
 }
