@@ -40,6 +40,7 @@ class AttendeeJoined extends Mailable
                     ->subject($subject)
                     ->view('emails.attendee.joined')
                     ->with([
+                        'name' => $this->attendee->name,
                         'email' => $this->attendee->email,
                         'title' => $this->meetup->title,
                         'start_date' => $this->meetup->getFormattedStartDate(),

@@ -15,6 +15,8 @@ class StoreAttendee extends FormRequest
     {
         $email = $this->request->get('email');
         return [
+            'name' => 'required',
+            'email' => 'required|email',
             'meetup_id' => 'exists:meetup,id|unique_attendee:' . $email,
         ];
     }
