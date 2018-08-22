@@ -23,10 +23,6 @@ class AttendeeController extends Controller
 
     public function create(StoreAttendee $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email'
-        ]);
         $parameters = $request->all();
 
         $attendee = new Attendee();
@@ -54,5 +50,4 @@ class AttendeeController extends Controller
             'is_email_sent' => true
         ]);
     }
-
 }
