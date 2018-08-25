@@ -4,4 +4,7 @@ Route::get('/', function () {
     return redirect('app');
 });
 
-ROute::get('/home', 'HomeController@show');
+Route::get('/home', 'HomeController@show');
+
+Route::get('/register', 'RegisterController@create');
+Route::post('/register', 'RegisterController@store');
